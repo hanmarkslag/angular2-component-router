@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Angular 2 QuickStart</title>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="../node_modules/angular2/bundles/router.dev.js"></script>
+    <script>
+        System.config({
+            packages: {'app': {defaultExtension: 'js'}}
+        });
+        System.import('app/app');
+    </script>
+</head>
+
+<body>
+
+    <header style="height: 100px; background-color: pink; text-align: center; padding-top: 40px; font-size: 36px; font-weight: bold">
+        Welkom bij de demo
+    </header>
+
+    <welkom>loading...</welkom>
+
+    <footer style="height: 100px; background-color: lightblue; text-align: center; padding-top: 40px; font-size: 36px; font-weight: bold">
+        Einde van de pagina
+    </footer>
+</body>
+
+</html>
