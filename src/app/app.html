@@ -1,0 +1,36 @@
+<br>
+
+<a [router-link]="['/Start']">
+    <img src="./app/ing.png">
+</a>
+
+<br><br>
+
+<a class="link" [router-link]="['/About']">About this website</a>
+<a class="link" [router-link]="['/Accounts']">Accounts</a>
+<a class="link" [router-link]="['/Contact']">Contact</a>
+
+<!--<br><br>-->
+
+<!--<button class="button" [router-link]="['/About']">About</button>-->
+<!--<button class="button" [router-link]="['/Accounts']">Accounts</button>-->
+<!--<button class="button" [router-link]="['/Contact']">Contact</button>-->
+
+<hr>
+<router-outlet></router-outlet>
+<hr>
+
+<style>
+    .button {
+        background-color: lightblue;
+        border-style: double;
+        border-color: orange;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .link {
+        font-size: 16px;
+        margin-right: 10px;
+        color: darkblue;
+    }
+</style>
