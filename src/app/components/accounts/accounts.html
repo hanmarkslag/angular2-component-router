@@ -1,7 +1,25 @@
-<h3>Your accounts</h3>
+<h2>Your accounts</h2>
 
 <div *ng-for="#account of accounts">
-    {{account.name}}
-    <span>   --   </span>
-    {{account.number}}
+
+    <span class="name">{{account.name}}</span><br>
+    <!--<span class="number">{{account.number}}</span>-->
+
+    <a class="number" [router-link]="['/Transactions', {iban: account.number}, 'Start' ]">{{account.number}}</a>
+
+    <br><br>
 </div>
+
+<style>
+    .name {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .number {
+        font-weight: bold;
+        font-style: italic ;
+        font-size: 16px;
+        color: darkslateblue;
+        text-decoration: none;
+    }
+</style>

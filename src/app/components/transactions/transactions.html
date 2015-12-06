@@ -1,0 +1,45 @@
+<h2>Transactions for account</h2>
+<div class="iban">{{iban}}</div>
+<br>
+
+<table>
+    <tr *ng-for="#transaction of transactions">
+
+        <td class="date">{{transaction.date}}</td>
+        <td class="creditor">{{transaction.creditor}}</td>
+        <td class="amount">{{transaction.amount}}</td>
+
+        <td><a class="number" [router-link]="['/Transactions', {iban: transaction.debtor}, 'TxDetails', {id: transaction.id} ]">details</a></td>
+
+    </tr>
+</table>
+
+<hr>
+
+<router-outlet></router-outlet>
+
+
+<style>
+    .iban {
+        font-weight: bold;
+        font-style: italic ;
+        font-size: 18px;
+        color: darkslateblue;
+        text-decoration: none;
+        margin-top: -15px;
+    }
+    .date {
+        font-weight: none;
+        padding-right: 15px;
+    }
+    .creditor {
+        font-weight: bold;
+        color: darkblue;
+        padding-right: 15px;
+    }
+    .amount {
+        font-weight: normal;
+        text-align: right;
+        padding-right: 15px;
+    }
+</style>

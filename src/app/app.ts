@@ -4,9 +4,9 @@ import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, LocationStrategy, Hash
 import {About} from './components/about/about';
 import {Accounts} from './components/accounts/accounts';
 import {Contact} from './components/contact/contact';
+import {Transactions} from './components/transactions/transactions';
 
 import {Start} from './components/start/start';
-import {Leeg} from './components/leeg/leeg';
 
 @Component({
     selector: 'welkom',
@@ -17,7 +17,9 @@ import {Leeg} from './components/leeg/leeg';
     new Route({path: '/', component: Start, name: 'Start'}),
     new Route({path: '/about', component: About, name: 'About'}),
     new Route({path: '/accounts', component: Accounts, name: 'Accounts'}),
-    new Route({path: '/contact', component: Contact, name: 'Contact'})
+    new Route({path: '/contact', component: Contact, name: 'Contact'}),
+    new Route({path: '/transactions/:iban/...', component: Transactions, name: 'Transactions'}),
+
 ])
 class MyDemoApp {
 }
